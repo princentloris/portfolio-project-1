@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding: 32px;
+    background-color: #3498db;
+  }
+
+nav {
+    padding: 32px;
+    display: flex; 
+    flex-direction: horizontal;
+}
+
+nav ul {
+    display: flex; 
+    flex-direction: horizontal;
+}
+
+nav ul li {
+    list-style-type: none;
+    padding: 16px;
+}
