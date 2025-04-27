@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact page</title>
+  <!-- Link to CSS -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- Optional: favicon, fonts, meta tags -->
+</head>
+<body>
+  
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="logo.jpg" alt="Website Logo" width="150">
+      </a>
+    </div>
+    <h1>
+      Blog de Romu
+    </h1>
+     <!-- Nav links -->
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div id="Content">
+
+    <!-- Main Content -->
+  <main>
+    <!-- Main sections of the page -->
+     <h2>
+      Contact
+     </h2>
+
+      <form id="contactForm">
+        <div class="formField">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="formField">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="formField">
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+      
+        <button type="submit">Send Message</button>
+      </form>
+
+    </main>
+
+  <!-- Sidebar (optional) -->
+  <aside>
+    <!-- Extra content like ads or links -->
+     <img id="face" src="romu.png" alt="close-up of romu face">
+  </aside>
+
+  </div>
+  
+
+  <!-- Footer -->
+  <footer>
+    <!-- Footer content like contact info or copyright -->
+  </footer>
+
+  <!-- JavaScript files -->
+  <script src="script.js"></script>
+</body>
+</html>

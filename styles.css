@@ -1,4 +1,13 @@
 
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 html, body {
   height: 100%;
   margin: 0;
@@ -27,20 +36,20 @@ header h1 {
 
 nav {
     display: flex; 
-    flex-direction: horizontal;
+    flex-direction: row;
 }
 
 nav ul {
     display: flex; 
-    flex-direction: horizontal;
+    flex-direction: row;
+    gap: 16px;
 }
 
 nav ul li {
     list-style-type: none;
-    padding: 16px;
 }
 
-#homeContent {
+#Content {
   display: flex;
   flex-direction: row;
   flex: 1;
@@ -92,17 +101,70 @@ main {
   border-top: 1px solid grey ;
 }
 
-.project {
+.projectHeader {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
 }
 
 .projectPhoto {
-  width: 200px;
+width: 100px;
+height: 100px;
 }
 
-.projecDesc {
+.projectDesc {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, padding 0.3s ease;
+}
+
+#contactForm {
   display: flex;
   flex-direction: column;
-  padding-left: 32px;
+  max-width: 400px;
+}
+
+.formField {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 16px;
+}
+
+@media (max-width: 768px) {
+  aside {
+    display: none;
+  }
+
+  header {
+    padding: 16px;
+  }
+
+  header img {
+    width: 100px;
+  }
+
+  header h1 {
+    font-size: 24px;
+    padding-left: 16px;
+  }
+
+  nav ul {
+    gap: 12px;
+    padding-left: 24px;
+  }
+
+  main {
+    padding: 16px;
+    width: 100%;
+  }
 }
