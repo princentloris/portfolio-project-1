@@ -1,19 +1,31 @@
-* {
+
+html, body {
+  height: 100%;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
 }
 
 header {
     display: flex;
     align-items: center;
     justify-content: left;
-    padding: 32px;
+    padding-left: 64px;
+    padding-right: 64px;
+    padding-top: 16px;
+    padding-bottom: 16px;
     background-color: #3498db;
   }
 
+header h1 {
+    font-size: 64px;
+    color: white;
+    padding-left: 32px;
+    flex: 1;
+}
+
 nav {
-    padding: 32px;
     display: flex; 
     flex-direction: horizontal;
 }
@@ -26,4 +38,71 @@ nav ul {
 nav ul li {
     list-style-type: none;
     padding: 16px;
+}
+
+#homeContent {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+}
+
+aside {
+  position: relative;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
+  border-left: 1px solid grey;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  padding-left: 64px;
+  padding-right: 64px;
+}
+
+#face {
+  position: absolute; /* New! */
+  top: 0;
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Fix horizontal centering */
+  height: 200px;
+  animation: moveDownUp 3s infinite alternate linear;
+}
+
+/* Animate from top: 0 to top: 100% */
+@keyframes moveDownUp {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: calc(100% - 200px); /* Move to bottom minus the image height */
+  }
+}
+
+#selectedProjects {
+  padding-top: 24px;
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid grey ;
+}
+
+.project {
+  display: flex;
+  flex-direction: row;
+}
+
+.projectPhoto {
+  width: 200px;
+}
+
+.projecDesc {
+  display: flex;
+  flex-direction: column;
+  padding-left: 32px;
 }
